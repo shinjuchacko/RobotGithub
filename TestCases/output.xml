@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.11.9 on win32)" generated="2024-11-25T21:58:10.076310" rpa="false" schemaversion="5">
+<suite id="s1" name="GithubLogin" source="C:\Users\shinj\PycharmProjects\DemoProject\TestCases\GithubLogin.robot">
+<test id="s1-t1" name="LoginToGithubAccount" line="14">
+<kw name="Open My Browser" owner="BrowserRelatedKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-25T21:58:10.318062" level="INFO">Opening browser 'chrome' to base url 'https://github.com/'.</msg>
+<arg>${appUrl}</arg>
+<arg>${appBrowser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-25T21:58:10.318062" elapsed="2.514310"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-25T21:58:12.832372" elapsed="0.685740"/>
+</kw>
+<kw name="Log Title" owner="SeleniumLibrary">
+<msg time="2024-11-25T21:58:13.952473" level="INFO">GitHub · Build and ship software on a single, collaborative platform · GitHub</msg>
+<doc>Logs and returns the title of the current page.</doc>
+<status status="PASS" start="2024-11-25T21:58:13.518112" elapsed="0.434361"/>
+</kw>
+<arg>${GitHub_MainPage}</arg>
+<arg>${Browser_Chrome}</arg>
+<status status="PASS" start="2024-11-25T21:58:10.318062" elapsed="3.634411"/>
+</kw>
+<kw name="Login To Account" owner="GithubSignInPageKeywords">
+<kw name="Click SignIn Link" owner="GithubMainPageKeywords">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-11-25T21:58:13.952473" level="INFO">Clicking link 'xpath://header/div[1]/div[2]/div[1]/div[1]/div[1]/a[1]'.</msg>
+<arg>${ButtonHeaderSignIn}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-25T21:58:13.952473" elapsed="0.607439"/>
+</kw>
+<status status="PASS" start="2024-11-25T21:58:13.952473" elapsed="0.607439"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-11-25T21:58:14.559912" elapsed="0.007067"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-25T21:58:14.566979" level="INFO">Typing text 'shinjuchacko@gmail.com' into text field 'xpath://input[@id='login_field']'.</msg>
+<arg>${InputUsername}</arg>
+<arg>${userName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-25T21:58:14.566979" elapsed="0.157281"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-25T21:58:14.724260" level="INFO">Typing text 'Maniyankolly7!' into text field 'id:password'.</msg>
+<arg>${InputPassword}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-25T21:58:14.724260" elapsed="0.137656"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-25T21:58:14.861916" level="INFO">Clicking element 'xpath://input[@name='commit']'.</msg>
+<arg>${ButtonSignIn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-25T21:58:14.861916" elapsed="1.098044"/>
+</kw>
+<arg>${user_name}</arg>
+<arg>${user_password}</arg>
+<status status="PASS" start="2024-11-25T21:58:13.952473" elapsed="2.007487"/>
+</kw>
+<kw name="Verify Successful Login" owner="GithubSignInPageKeywords">
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-11-25T21:58:15.959960" elapsed="0.000000"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-25T21:58:15.975600" level="INFO">Page title is 'GitHub'.</msg>
+<arg>GitHub</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-11-25T21:58:15.959960" elapsed="0.015640"/>
+</kw>
+<status status="PASS" start="2024-11-25T21:58:15.959960" elapsed="0.015640"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-25T21:58:15.975600" elapsed="2.236850"/>
+</kw>
+<status status="PASS" start="2024-11-25T21:58:10.318062" elapsed="7.895049"/>
+</test>
+<test id="s1-t2" name="SignUpWithExistingUser" line="18">
+<kw name="Open My Browser" owner="BrowserRelatedKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-25T21:58:18.214154" level="INFO">Opening browser 'chrome' to base url 'https://github.com/'.</msg>
+<arg>${appUrl}</arg>
+<arg>${appBrowser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-25T21:58:18.214154" elapsed="3.582520"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-25T21:58:21.796674" elapsed="0.199055"/>
+</kw>
+<kw name="Log Title" owner="SeleniumLibrary">
+<msg time="2024-11-25T21:58:22.042999" level="INFO">GitHub · Build and ship software on a single, collaborative platform · GitHub</msg>
+<doc>Logs and returns the title of the current page.</doc>
+<status status="PASS" start="2024-11-25T21:58:21.995729" elapsed="0.047270"/>
+</kw>
+<arg>${GitHub_MainPage}</arg>
+<arg>${Browser_Chrome}</arg>
+<status status="PASS" start="2024-11-25T21:58:18.214154" elapsed="3.828845"/>
+</kw>
+<kw name="SignUp To Github By Existing User" owner="GithubSignUpPageKeywords">
+<kw name="Click SignUp" owner="GithubMainPageKeywords">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-11-25T21:58:22.042999" level="INFO">Clicking link 'xpath://header/div[1]/div[2]/div[1]/div[1]/a[1]'.</msg>
+<arg>${ButtonHeaderSignUp}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-25T21:58:22.042999" elapsed="0.826447"/>
+</kw>
+<status status="PASS" start="2024-11-25T21:58:22.042999" elapsed="0.826447"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-11-25T21:58:22.869446" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-25T21:58:22.877461" level="INFO">Typing text 'shinjuchacko@gmail.com' into text field 'id:email'.</msg>
+<arg>${InputEmail}</arg>
+<arg>${userName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-25T21:58:22.869446" elapsed="2.302986"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-25T21:58:30.172744" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-25T21:58:25.172432" elapsed="5.000312"/>
+</kw>
+<arg>${user_name}</arg>
+<status status="PASS" start="2024-11-25T21:58:22.042999" elapsed="8.129745"/>
+</kw>
+<kw name="Verify Existing User Error Message" owner="GithubSignUpPageKeywords">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-25T21:58:30.192386" level="INFO">Element 'xpath://p[@id='email-err']' contains text 'The email you have provided is already associated with an account.'.</msg>
+<arg>${ErrorExistingUser}</arg>
+<arg>${errorMessage}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-11-25T21:58:30.172744" elapsed="0.019642"/>
+</kw>
+<arg>The email you have provided is already associated with an account.</arg>
+<status status="PASS" start="2024-11-25T21:58:30.172744" elapsed="0.019642"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-25T21:58:30.192386" elapsed="5.112318"/>
+</kw>
+<status status="PASS" start="2024-11-25T21:58:18.213646" elapsed="17.091058"/>
+</test>
+<status status="PASS" start="2024-11-25T21:58:10.079422" elapsed="25.225282"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="GithubLogin">GithubLogin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
